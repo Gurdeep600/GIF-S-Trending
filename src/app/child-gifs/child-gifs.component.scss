@@ -1,0 +1,25 @@
+@import '../../assets/config.scss';
+
+.gif-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 100px 0 100px;
+}
+
+.gif-item {
+    margin: 10px;
+}
+
+.gif-item img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+:host ::ng-deep .ngx-pagination a,
+:host ::ng-deep .ngx-pagination button {
+    color: $white-color !important;
+    display: block;
+    padding: 0.1875rem 0.625rem;
+    border-radius: 0;
+    margin-top: 20px;
+}

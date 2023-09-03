@@ -1,0 +1,11 @@
+<!-- GIF Container: Contains a list of GIFs and pagination controls -->
+<div class="gif-container">
+    <!-- *ngFor loop to iterate over each GIF in the 'gifs' array -->
+    <div *ngFor="let gif of gifs | paginate: { itemsPerPage:10, currentPage: page, totalItems: dataLength}" class="gif-item" class="gif-item">
+      <!-- Display each GIF image with a source and alt text -->
+      <img [src]="gif.images.fixed_height.url" alt="{{ gif.title }}">
+    </div>
+  
+    <!-- Pagination Controls: Displayed below the GIFs to navigate through pages -->
+    <pagination-controls class="pagination" (pageChange)="page=$event"></pagination-controls>
+  </div>
