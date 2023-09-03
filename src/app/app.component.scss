@@ -1,0 +1,101 @@
+@import '../assets/config.scss';
+
+.gif-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 100px 0 100px;
+}
+
+.gif-item {
+  margin: 10px;
+}
+
+h2{
+  color: $white-color;
+  margin-top: 46px;
+  margin-left: 105px;
+}
+
+.gif-item img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.logo-container {
+  text-align: left;
+  margin-bottom: 20px;
+  width: 80px;
+  margin-left: 100px;
+}
+
+.search-input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.close-icon {
+  position: absolute;
+  top: 50%;
+  right: 55px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.search-input {
+  width: 1000px;
+  height: 32px;
+  margin-left: 100px;
+}
+
+.search-input::placeholder {
+  font-size: 15px;
+}
+
+.custom-button {
+  width: 50px;
+  height: 38px;
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: linear-gradient(45deg, $purple-color, $custom-color);
+  color: $white-color;
+  border: none;
+}
+
+
+@media screen and (max-width:1158px) {
+  .search-input {
+    width: 800px;
+    height: 32px;
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width:950px) {
+  .search-input {
+    width: 600px;
+    height: 32px;
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width:734px) {
+  .search-input {
+    width: 400px;
+    height: 32px;
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width:526px) {
+  .search-input {
+    width: 200px;
+    height: 32px;
+    margin-left: 100px;
+  }
+}
+
+
+

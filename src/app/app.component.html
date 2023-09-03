@@ -1,0 +1,25 @@
+<!-- Logo Container: Displays a logo image -->
+<div class="logo-container">
+  <img src="assets/images/header-logoo.jpg">
+</div>
+
+
+<div class="search-container">
+  <div class="search-input-container">
+    <input type="text" class="search-input" placeholder="Search" [(ngModel)]="inputValue" (input)="onInputChanged()" #filter>  
+    <!-- Close icon displayed when inputValue is not empty, used to clear the input -->
+    <fa-icon [icon]="closeIcon" class="close-icon" *ngIf="inputValue" (click)="clearInput(filter)"></fa-icon>
+    
+    <!-- Button for triggering the search -->
+    <button class="custom-button" (click)="filterResults(filter.value)">
+      
+      <!-- Search icon displayed on the button -->
+      <fa-icon class="search-icon" [icon]="icon"></fa-icon>
+    </button>
+  </div>
+</div>
+
+<h2>Trending Gifs</h2>
+
+<!--parent to child data sharing-->
+<app-child-gifs [gifs]="trendingGifs" [dataLength]="totalLength"></app-child-gifs>
